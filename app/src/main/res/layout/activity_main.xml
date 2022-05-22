@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Agencia 'El Destino Feliz'"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"></TextView>
+
+        <EditText
+            android:id="@+id/txtNumBoleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce el numero de boleto"
+            android:inputType="number"
+            android:textSize="15sp"></EditText>
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce el nombre del cliente"
+            android:textSize="15sp"></EditText>
+
+        <EditText
+            android:id="@+id/txtEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce la edad del cliente"
+            android:inputType="number"
+            android:textSize="15sp"></EditText>
+
+        <Spinner
+            android:id="@+id/spnDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+        <Spinner
+            android:id="@+id/spnTipoBoleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+        <EditText
+            android:id="@+id/txtPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce el precio del vuelo"
+            android:inputType="numberDecimal"
+            android:textSize="15sp"></EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spnDia"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"></Spinner>
+
+            <Spinner
+                android:id="@+id/spnMes"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"></Spinner>
+
+            <Spinner
+                android:id="@+id/spnAño"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"></Spinner>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnImprimir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F51B5"
+            android:text="Imprimir Boleto"
+            android:textSize="15sp"></Button>
+
+        <Button
+            android:id="@+id/btnNuevo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F51B5"
+            android:text="Ingresar Nuevo Boleto"
+            android:textSize="15sp"></Button>
+
+        <TextView
+            android:id="@+id/lblImpresion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
