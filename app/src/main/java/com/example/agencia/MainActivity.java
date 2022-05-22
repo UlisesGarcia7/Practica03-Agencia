@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         spnDia.getSelectedItem().toString().trim().equals("") ||
                         spnMes.getSelectedItem().toString().trim().equals("") ||
                         spnAño.getSelectedItem().toString().trim().equals("")){
-                    Toast.makeText(MainActivity.this, "Es Necesario Llenar Todos los Campos",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Es Necesario Llenar Todos los Campos",Toast.LENGTH_LONG).show();
                 } else{
                     int numBoleto = Integer.parseInt(txtNumBoleto.getText().toString());
                     String nomCliente = txtNombre.getText().toString();
@@ -101,16 +101,17 @@ public class MainActivity extends AppCompatActivity {
                     Boleto.setFecha(fecha);
 
                     lblImpresion.setText(" - - - - - - - -  - - - - - IMPRESION DE BOLETO - - - - - - - - - - - - - " +
-                                  "\nNumero de Boleto: " + Boleto.getNumBoleto() +
-                                  "\nNombre del Cliente: " + Boleto.getNomCliente() +
+                                  "\nNo°Boleto: " + Boleto.getNumBoleto() +
+                                  "\nNombre Cliente: " + Boleto.getNomCliente() +
                                   "\nDestino: " + Boleto.getDestino() +
-                                  "\nTipo de Viaje: " + Boleto.getTipoViaje() +
+                                  "\nTipo Viaje: " + Boleto.getTipoViaje() +
                                   "\nPrecio: $" + Boleto.getPrecio() +
                                   "\nFecha: " + Boleto.getFecha() +
+                                  "\nIMPORTE" +
                                   "\nSubtotal: $" + Boleto.calcularSubTotal() +
-                                  "\nImpuesto: $" + Boleto.calcularImpuesto() +
-                                  "\nDescuento: $" + Boleto.calcularDescuento(edad) +
-                                  "\nTotal: $" + Boleto.calcularTotal(edad));
+                                  "\nImpuesto 16% (+): $" + Boleto.calcularImpuesto() +
+                                  "\nDescuento (-): $" + Boleto.calcularDescuento(edad) +
+                                  "\nTotal a pagar: $" + Boleto.calcularTotal(edad));
                 }
             }
         });
@@ -119,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(lblImpresion.getText().toString().matches("")){
-                    Toast.makeText(MainActivity.this, "No Hay Ningun Boleto Impreso",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "No todos o ningun estan llenos",Toast.LENGTH_LONG).show();
                 } else {
                     txtNumBoleto.setText("");
                     txtNombre.setText("");
